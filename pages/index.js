@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import ImageView from "../components/ImageView";
+import { StyledIndexContainer } from "../components/styles/Index.styled";
 
 const Title = styled.h1`
-    font-size: 50px;
     color: ${({ theme }) => theme.colors.primary};
 `;
 
 export default function Home() {
-    return <Title>Index page</Title>;
+    return (
+        <StyledIndexContainer>
+            <ImageView />
+            <Title>Index page</Title>
+        </StyledIndexContainer>
+    );
 }

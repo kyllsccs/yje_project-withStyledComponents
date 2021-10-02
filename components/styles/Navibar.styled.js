@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.div`
-    margin: 0 3rem;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     justify-content: space-between;
 `;
 
 export const StyledLogo = styled.div`
-    padding: 1rem;
+    padding: 1.2rem 0;
     font-weight: 800;
-    font-size: 1.7rem;
 
     a {
+        font-size: 2rem;
         color: blue;
-        span {
+        text-decoration: none;
+        a {
             font-weight: 300;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-style: italic;
             color: gray;
         }
@@ -28,17 +28,17 @@ export const StyledLogo = styled.div`
 
 export const StyledMenu = styled.div`
     display: flex;
-    padding: 1rem;
+    padding: 1rem 0;
 
     a {
-        padding: 0 2rem;
+        padding: 1rem 0.2rem 1rem 1rem;
         font-style: italic;
+        font-weight: 600;
         font-size: 1.2rem;
-        color: green;
+        text-decoration: none;
+        color: #0307be;
         &:hover {
             color: red;
         }
     }
 `;
-
-export const StyleMenuLink = styled.div``;

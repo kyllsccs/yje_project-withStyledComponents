@@ -12,12 +12,12 @@ function Navibar() {
                 <StyledLogo>
                     <Link href="/">
                         <a>
-                            Y.J.E <span> Display Tech</span>
+                            Y.J.E <a> Display Tech</a>
                         </a>
                     </Link>
                 </StyledLogo>
                 <StyledMenu>
-                    <Link href="/">
+                    <Link href="/products">
                         <a>Products</a>
                     </Link>
                     <Link href="/">
