@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
     FooterContainer,
@@ -7,7 +6,6 @@ import {
     StyledFootQuickLink,
 } from "../components/styles/Foorterbar.styled";
 import { StyledLogo } from "./styles/Navibar.styled";
-import Logo_pic from "../image/logo.jpg";
 
 function Footerbar() {
     return (
@@ -16,7 +14,7 @@ function Footerbar() {
                 <StyledLogo>
                     <Link href="/">
                         <a>
-                            Y.J.E <a> Display Tech</a>
+                            Y.J.E <span> Display Tech</span>
                         </a>
                     </Link>
                 </StyledLogo>
@@ -31,24 +29,33 @@ function Footerbar() {
             <StyledFootQuickLink>
                 <span> Quick Link</span>
                 <li>
-                    <Link href="/">About</Link>
+                    <Link href="/">
+                        <a>About</a>
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/">Products</Link>
+                    <Link href="/">
+                        <a>Products</a>
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/">Solutions</Link>
+                    <Link href="/">
+                        <a>Solutions</a>
+                    </Link>
                 </li>
                 <li>
-                    <Link href="/">Partners</Link>
+                    <Link href="/">
+                        <a>Partners</a>
+                    </Link>
                 </li>
             </StyledFootQuickLink>
             <StyledFootContact>
-                <span>Contact YJE</span>
+                <a>Contact YJE</a>
                 <li>TEL : 886-2-22263839 </li>
                 <li>FAX : 886-2-22263836</li>
                 <li>E-mail : kk@yje.com.tw</li>
                 <li>
+                    {/* Address */}
                     Address: No. 496-6, Bannan Rd., Zhonghe Dist., New Taipei
                     City 235602, Taiwan (R.O.C.)
                 </li>

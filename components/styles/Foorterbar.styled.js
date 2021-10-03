@@ -6,9 +6,9 @@ export const FooterContainer = styled.div`
     justify-content: start;
 `;
 
-export const StyledFootInfo = styled.image`
-    width: 40vw;
-    /* max-height: 100vh; */
+export const StyledFootInfo = styled.section`
+    width: 30vw;
+    max-height: 100vh;
     padding: 1rem 2rem;
 
     p {
@@ -52,9 +52,13 @@ export const StyledFootContact = styled.div`
     color: white;
     padding: 1.9rem;
 
-    span {
+    a {
         color: white;
         font-size: 1.6rem;
         font-weight: 600;
+    }
+
+    li {
+        font-size: 1.2rem;
     }
 `;

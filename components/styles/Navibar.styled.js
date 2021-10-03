@@ -14,11 +14,14 @@ export const StyledLogo = styled.div`
         font-size: 2rem;
         color: #0000ff;
         text-decoration: none;
-        a {
+        span {
             font-weight: 800;
             font-size: 1.5rem;
             /* font-style: italic; */
             color: white;
+            &:hover {
+                color: red;
+            }
         }
         &:hover {
             color: red;
