@@ -1,14 +1,21 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
     MenuCardContainer,
-    StyledMenuSection,
+    StyledMenuCardPhoto,
+    StyledReadMoreButton,
 } from "../components/styles/MenuCard.styled";
+import Photo from "../image/4537032.jpg";
 
-function MenuCard() {
+function MenuCard(props) {
     return (
         <MenuCardContainer>
-            {/* <StyledMenuSection> */}
-            <h1>Hello</h1>
-            {/* </StyledMenuSection> */}
+            <Image src={Photo} />
+            <a>{props.title}</a>
+            <p>{props.contents}</p>
+            <Link href={props.linkto}>
+                <StyledReadMoreButton>{props.buttonTXT}</StyledReadMoreButton>
+            </Link>
         </MenuCardContainer>
     );
 }

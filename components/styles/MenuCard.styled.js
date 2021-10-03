@@ -1,17 +1,34 @@
 import styled from "styled-components";
 
 export const MenuCardContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: block;
     background-color: wheat;
-    width: 25vw;
-    justify-content: center;
+    width: 20vw;
     border: solid;
     margin: 1rem 1rem;
+
+    a {
+        font-size: 1.6rem;
+    }
+
+    p {
+        padding: 0rem 1rem;
+    }
 `;
 
-export const StyledMenuSection = styled.section`
-    padding: 0 3rem;
-    justify-content: center;
-    background-color: whitesmoke;
+export const StyledReadMoreButton = styled.button`
+    background-color: white;
+    height: 2rem;
+    width: 10rem;
+    margin: 1rem 1rem;
+    cursor: grabbing;
+
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+    }
+    &:hover {
+        background-color: blue;
+        color: white;
+    }
 `;

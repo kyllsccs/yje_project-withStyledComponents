@@ -5,6 +5,7 @@ export const StyledIndexContainer = styled.div`
 `;
 
 export const StyledIndexCard = styled.section`
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 `;

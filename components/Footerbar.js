@@ -29,7 +29,7 @@ function Footerbar() {
             <StyledFootQuickLink>
                 <span> Quick Link</span>
                 <li>
-                    <Link href="/">
+                    <Link href="/about">
                         <a>About</a>
                     </Link>
                 </li>

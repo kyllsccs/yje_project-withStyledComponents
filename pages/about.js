@@ -1,8 +1,17 @@
+import { AboutPageContainer } from "../components/styles/About.styled";
+import MenuCard from "../components/MenuCard";
+
 function about() {
     return (
-        <div>
+        <AboutPageContainer>
             <div>About us</div>
-        </div>
+            <MenuCard
+                title="ABout us"
+                contents="Hello"
+                linkto="/"
+                buttonTXT="Back"
+            />
+        </AboutPageContainer>
     );
 }
 
