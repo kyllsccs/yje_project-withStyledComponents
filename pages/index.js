@@ -23,28 +23,40 @@ export default function Home() {
             <ImageView />
             <StyledIndexCard>
                 <MenuCard
-                    title="Frameless Mutitouch Monitor"
+                    title="Frameless Muti-touch Monitor"
                     contents={card_contents}
                     buttonTXT="Get More..."
                     linkto="/about"
+                    vw="20vw"
+                    PhotoShow="on"
+                    ButtonShow="on"
                 />
                 <MenuCard
                     title="Aluminum Frame Monitor"
                     contents={card_contents}
                     buttonTXT="Get More..."
                     linkto="/"
+                    vw="20vw"
+                    PhotoShow="on"
+                    ButtonShow="on"
                 />
                 <MenuCard
                     title="Multi-Mounting type Monitor"
                     contents={card_contents}
                     buttonTXT="Get More..."
                     linkto="/"
+                    vw="20vw"
+                    PhotoShow="on"
+                    ButtonShow="on"
                 />
                 <MenuCard
                     title="High Brightness Display / Kits"
                     contents={card_contents}
                     buttonTXT="Get More..."
                     linkto="/"
+                    vw="20vw"
+                    PhotoShow="on"
+                    ButtonShow="on"
                 />
             </StyledIndexCard>
         </StyledIndexContainer>

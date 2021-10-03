@@ -3,15 +3,17 @@ import styled from "styled-components";
 export const MenuCardContainer = styled.div`
     display: block;
     background-color: wheat;
-    width: 20vw;
-    border: solid;
+    /* width: 20vw; */
+    /* border: solid; */
     margin: 1rem 1rem;
 
     a {
-        font-size: 1.6rem;
+        font-size: 2rem;
+        font-weight: 900;
     }
 
     p {
+        font-size: 1.2rem;
         padding: 0rem 1rem;
     }
 `;
