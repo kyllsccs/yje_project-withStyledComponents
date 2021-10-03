@@ -10,7 +10,6 @@ export default function Home() {
     return (
         <StyledIndexContainer>
             <ImageView />
-            <Title>Index page</Title>
         </StyledIndexContainer>
     );
 }

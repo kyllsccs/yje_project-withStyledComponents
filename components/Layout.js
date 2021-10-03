@@ -1,4 +1,5 @@
 import Navibar from "./Navibar";
+import Footerbar from "./Footerbar";
 import { StyledLayout } from "../components/styles/Layout.styled";
 
 function Layout({ children }) {
@@ -6,6 +7,7 @@ function Layout({ children }) {
         <StyledLayout>
             <Navibar />
             <div>{children}</div>
+            <Footerbar />
         </StyledLayout>
     );
 }
