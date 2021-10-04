@@ -23,10 +23,10 @@ function about() {
                 title="About Y.J.E"
                 contents={card_contents}
                 linkto="/"
-                buttonTXT="Back"
+                buttonTXT="this is test"
                 vw="90vw"
                 PhotoShow="off"
-                ButtonShow="off"
+                ButtonShow="on"
             />
             <MenuCard
                 title="Y.J.E Develope"

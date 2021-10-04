@@ -9,6 +9,11 @@ export const StyledNav = styled.div`
 export const StyledLogo = styled.div`
     padding: 1rem 1rem;
     font-weight: 1200;
+    cursor: grabbing;
+
+    &:hover {
+        background-color: #3d4347;
+    }
 
     a {
         font-size: 2rem;
@@ -20,16 +25,17 @@ export const StyledLogo = styled.div`
             /* font-style: italic; */
             color: white;
             &:hover {
-                color: red;
+                background-color: #3d4347;
             }
         }
         &:hover {
             color: red;
+            background-color: #3d4347;
         }
     }
 `;
 
-export const StyledMenu = styled.div`
+export const StyledMenu = styled.section`
     display: flex;
     padding: 1rem 0;
 
@@ -41,7 +47,8 @@ export const StyledMenu = styled.div`
         text-decoration: none;
         color: white;
         &:hover {
-            color: red;
+            background-color: navy;
         }
     }
 `;
+
