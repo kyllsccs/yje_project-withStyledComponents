@@ -52,3 +52,21 @@ export const StyledMenu = styled.section`
     }
 `;
 
+export const StyledMenuSelect = styled.select`
+    background-color: black;
+    width: 10vw;
+    height: 3rem;
+    color: white;
+    cursor: grabbing;
+
+    li {
+        cursor: grabbing;
+        font-size: 1.8rem;
+        color: white;
+        background: black;
+        display: flex;
+        white-space: pre;
+        min-height: 20px;
+        padding: 0px 2px 1px;
+    }
+`;

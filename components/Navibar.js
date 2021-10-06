@@ -7,6 +7,10 @@ import {
 import Link from "next/link";
 
 function Navibar() {
+    const link2 = (a, b) => {
+        return;
+        <Link href={a}>b</Link>;
+    };
     return (
         <>
             <StyledNav>
