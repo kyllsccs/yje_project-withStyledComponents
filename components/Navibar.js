@@ -25,10 +25,10 @@ function Navibar() {
                     <Link href="/products">
                         <a>Products</a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/solutions">
                         <a>Solutions</a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/contact">
                         <a>Contact</a>
                     </Link>
                 </StyledMenu>

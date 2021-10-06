@@ -34,17 +34,17 @@ function Footerbar() {
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/products">
                         <a>Products</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/solutions">
                         <a>Solutions</a>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/">
+                    <Link href="/partners">
                         <a>Partners</a>
                     </Link>
                 </li>

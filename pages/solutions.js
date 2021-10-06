@@ -1,9 +1,10 @@
 import MenuCard from "../components/MenuCard";
 
-function contact() {
+function solutions() {
     return (
         <div>
-            <h1>Contact Information</h1>
+            <h1>Solutions</h1>
+            <MenuCard />
             <MenuCard />
             <MenuCard />
             <MenuCard />
@@ -11,4 +12,4 @@ function contact() {
     );
 }
 
-export default contact;
+export default solutions;

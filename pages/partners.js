@@ -1,9 +1,9 @@
 import MenuCard from "../components/MenuCard";
 
-function contact() {
+function partners() {
     return (
         <div>
-            <h1>Contact Information</h1>
+            <h1>Partners</h1>
             <MenuCard />
             <MenuCard />
             <MenuCard />
@@ -11,4 +11,4 @@ function contact() {
     );
 }
 
-export default contact;
+export default partners;
