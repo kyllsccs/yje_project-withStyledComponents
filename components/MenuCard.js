@@ -37,4 +37,16 @@ function MenuCard(props) {
     );
 }
 
+// 設定帶入Deafult值, 避免沒有輸入對應paramater導致錯誤 default.defaultProps
+// 設定預設值, 顯示的方式排列, 必須在每個page module 自己做調整
+MenuCard.defaultProps = {
+    vw: "20vw",
+    PhotoShow: "on",
+    title: "Enter Topic",
+    contents: "Enter contents",
+    ButtonShow: "on",
+    linkto: "/",
+    buttonTXT: "button content",
+};
+
 export default MenuCard;
