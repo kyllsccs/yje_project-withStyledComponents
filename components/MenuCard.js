@@ -4,7 +4,7 @@ import {
     MenuCardContainer,
     StyledReadMoreButton,
 } from "../components/styles/MenuCard.styled";
-import Photo from "../image/4537032.jpg";
+import Photo_1 from "../image/4537032.jpg";
 
 function MenuCard(props) {
     const vwStyle = props.vw;
@@ -16,7 +16,11 @@ function MenuCard(props) {
             }}
         >
             <div>
-                {props.PhotoShow === "on" ? <Image src={Photo} /> : <span />}
+                {props.PhotoShow === "on" ? (
+                    <Image src={props.Photo} />
+                ) : (
+                    <span />
+                )}
             </div>
             {/* 控制圖片是否顯示, on顯示 off關閉 */}
             <a>{props.title}</a>
@@ -47,6 +51,7 @@ MenuCard.defaultProps = {
     ButtonShow: "on",
     linkto: "/",
     buttonTXT: "button content",
+    Photo: Photo_1,
 };
 
 export default MenuCard;

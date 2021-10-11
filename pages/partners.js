@@ -1,13 +1,22 @@
 import MenuCard from "../components/MenuCard";
+import { PartnersStyledContainer } from "../components/styles/Partners.styled";
+import Image from "next/image";
+import partner_1 from "../image/partners/ADVANTECH.png";
 
 function partners() {
     return (
-        <div>
-            <h1>Partners</h1>
-            <MenuCard />
-            <MenuCard />
-            <MenuCard />
-        </div>
+        <PartnersStyledContainer>
+            <MenuCard
+                Photo={partner_1}
+                vw="100vw"
+                buttonTXT="Link"
+                linkto="/image/partners/ADVANTECH.PNG"
+            />
+            <MenuCard Photo={partner_1} vw="100vw" buttonTXT="Link" />
+            <MenuCard Photo={partner_1} vw="100vw" buttonTXT="Link" />
+            <MenuCard Photo={partner_1} vw="100vw" buttonTXT="Link" />
+            <MenuCard Photo={partner_1} vw="100vw" buttonTXT="Link" />
+        </PartnersStyledContainer>
     );
 }
 
