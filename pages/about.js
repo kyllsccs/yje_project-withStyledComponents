@@ -1,5 +1,10 @@
-import { AboutPageContainer } from "../components/styles/About.styled";
+import {
+    AboutPageContainer,
+    StyledInfoGroup,
+} from "../components/styles/About.styled";
 import MenuCard from "../components/MenuCard";
+import Image from "next/image";
+import Photo_Sample from "../image/4537032.jpg";
 
 const card_contents = `
 Where can I get some?
@@ -19,24 +24,30 @@ humour, or non-characteristic words etc.
 function about() {
     return (
         <AboutPageContainer>
-            <MenuCard
-                title="About Y.J.E"
-                contents={card_contents}
-                linkto="/"
-                buttonTXT="this is test"
-                vw="90vw"
-                PhotoShow="off"
-                ButtonShow="on"
-            />
-            <MenuCard
-                title="Y.J.E Develope"
-                contents={card_contents}
-                linkto="/"
-                buttonTXT="Back"
-                vw="90vw"
-                PhotoShow="off"
-                ButtonShow="off"
-            />
+            <StyledInfoGroup>
+                <Image src={Photo_Sample} />
+                <MenuCard
+                    title="About Y.J.E"
+                    contents={card_contents}
+                    linkto="/"
+                    buttonTXT="this is test"
+                    vw="90vw"
+                    PhotoShow="off"
+                    ButtonShow="on"
+                />
+            </StyledInfoGroup>
+            <StyledInfoGroup>
+                <MenuCard
+                    title="Y.J.E Develope"
+                    contents={card_contents}
+                    linkto="/"
+                    buttonTXT="Back"
+                    vw="90vw"
+                    PhotoShow="off"
+                    ButtonShow="off"
+                />
+                <Image src={Photo_Sample} />
+            </StyledInfoGroup>
         </AboutPageContainer>
     );
 }
