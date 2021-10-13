@@ -6,7 +6,6 @@ import fs from "fs";
 import path from "path";
 
 function partners({ posts }) {
-    console.log(posts);
     return (
         <PartnersStyledContainer>
             <MenuCard
@@ -22,9 +21,27 @@ function partners({ posts }) {
 // Server side 的路徑, path = 直接指定要接哪個資料夾
 export async function getStaticProps() {
     const files = fs.readdirSync(path.join("Contents/partners.posts"));
+
+    const posts = files.map((filename) => {
+        const slug = filename.replace(".md", "");
+
+        // 讀取檔案, 用同步function, utf-8 指定編碼方式
+        const markDownContents = fs.readFileSync(
+            path.join("Contents/partners.posts", filename),
+            "utf-8"
+        );
+
+        console.log(markDownContents);
+
+        return {
+            slug,
+            markDownContents,
+        };
+    });
+
     return {
         props: {
-            posts: { files }, // Props 物件裡面的 posts 可被當成props傳入
+            posts: { posts }, // Props 物件裡面的 posts 可被當成props傳入
         },
     };
 }
