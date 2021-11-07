@@ -1,4 +1,4 @@
-import Cards from "../components/Cards";
+import PartnersCards from "../components/PartnersCards";
 import { PartnersStyledContainer } from "../components/styles/Partners.styled";
 import fs from "fs";
 import path from "path";
@@ -8,8 +8,9 @@ function partners({ posts }) {
     // console.log(posts);
     return (
         <PartnersStyledContainer>
+            <h1>Partners</h1>
             {posts.map((post, index) => (
-                <Cards post={post} />
+                <PartnersCards post={post} />
             ))}
         </PartnersStyledContainer>
     );
