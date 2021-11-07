@@ -4,7 +4,7 @@ import {
     MenuCardContainer,
     StyledReadMoreButton,
 } from "../components/styles/MenuCard.styled";
-import Photo_1 from "../image/4537032.jpg";
+import Photo_1 from "../public/image/posts/4238588.png";
 
 function MenuCard(props) {
     const vwStyle = props.vw;

@@ -4,7 +4,7 @@ import {
 } from "../components/styles/About.styled";
 import MenuCard from "../components/MenuCard";
 import Image from "next/image";
-import Photo_Sample from "../image/4537032.jpg";
+import Photo_Sample from "../public/image/posts/4537032.jpg";
 
 const card_contents = `
 Where can I get some?

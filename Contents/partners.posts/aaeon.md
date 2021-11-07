@@ -1,11 +1,12 @@
 ---
 title: "aaeon"
 date: "2021/10/12"
-excerpt: "aaeno"
-cover_image: "../../image/patners/AAEON.png"
+excerpt: "aaeon"
+cover_image: "/image/posts/partners/AAEON.png"
+website: "www.aaeon.com"
 ---
 
-<img src='../../image/partners/AAEON.png' />
+<img src='/image/partners/AAEON.png' />
 
 ## Advantech
 

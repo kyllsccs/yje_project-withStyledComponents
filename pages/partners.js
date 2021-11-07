@@ -1,27 +1,26 @@
-import MenuCard from "../components/MenuCard";
+import Cards from "../components/Cards";
 import { PartnersStyledContainer } from "../components/styles/Partners.styled";
-import Image from "next/image";
-import partner_1 from "../image/partners/ADVANTECH.png";
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 
 function partners({ posts }) {
+    // console.log(posts);
     return (
         <PartnersStyledContainer>
-            <MenuCard
-                Photo={partner_1}
-                vw="100vw"
-                buttonTXT="Link"
-                linkto="/image/partners/ADVANTECH.PNG"
-            />
+            {posts.map((post, index) => (
+                <Cards post={post} />
+            ))}
         </PartnersStyledContainer>
     );
 }
 
-// Server side 的路徑, path = 直接指定要接哪個資料夾
+// Server side 的路徑, path = 直接指定要接哪個資料夾, fetch the data.
 export async function getStaticProps() {
+    // 指定讀取檔案資料夾, 取得資料夾內部資訊, type is Array.
     const files = fs.readdirSync(path.join("Contents/partners.posts"));
 
+    // 使用map function來返回每一個markdown裡面的資訊
     const posts = files.map((filename) => {
         const slug = filename.replace(".md", "");
 
@@ -30,18 +29,20 @@ export async function getStaticProps() {
             path.join("Contents/partners.posts", filename),
             "utf-8"
         );
+        // console.log(markDownContents);
 
-        console.log(markDownContents);
+        // 重新解構, 把data 解構為 frontmatter
+        const { data: frontmatter } = matter(markDownContents);
 
         return {
             slug,
-            markDownContents,
+            frontmatter,
         };
     });
 
     return {
         props: {
-            posts: { posts }, // Props 物件裡面的 posts 可被當成props傳入
+            posts, // 把map 出來的objects 物件, 賦予給props.
         },
     };
 }
