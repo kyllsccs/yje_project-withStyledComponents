@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MenuCardContainer = styled.div`
     display: block;
-    background-color: wheat;
+    background-color: white;
     /* width: 20vw; */
     /* border: solid; */
     margin: 1rem 1rem;

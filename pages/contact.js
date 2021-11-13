@@ -1,12 +1,10 @@
-import MenuCard from "../components/MenuCard";
+import ImageView from "../components/ImageView";
 
 function contact() {
     return (
         <div>
-            <h1>Contact Information</h1>
-            <MenuCard />
-            <MenuCard />
-            <MenuCard />
+            <h2>Contact Information</h2>
+            <ImageView />
         </div>
     );
 }
