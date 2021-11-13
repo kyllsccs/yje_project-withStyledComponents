@@ -14,7 +14,7 @@ function Navibar() {
     return (
         <>
             <StyledNav>
-                <Link href="/">
+                <Link href="/" passHref>
                     <StyledLogo>
                         <a>
                             Y.J.E <span> Display Tech</span>
@@ -22,13 +22,13 @@ function Navibar() {
                     </StyledLogo>
                 </Link>
                 <StyledMenu>
-                    <Link href="/products">
+                    <Link href="/products" passHref>
                         <a>Products</a>
                     </Link>
-                    <Link href="/solutions">
+                    <Link href="/solutions" passHref>
                         <a>Solutions</a>
                     </Link>
-                    <Link href="/contact">
+                    <Link href="/contact" passHref>
                         <a>Contact</a>
                     </Link>
                 </StyledMenu>

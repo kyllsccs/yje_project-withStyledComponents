@@ -10,7 +10,7 @@ function partners({ posts }) {
         <PartnersStyledContainer>
             <h1>Partners</h1>
             {posts.map((post, index) => (
-                <PartnersCards post={post} />
+                <PartnersCards key={index} post={post} />
             ))}
         </PartnersStyledContainer>
     );

@@ -9,7 +9,7 @@ function solutions({ posts }) {
         <SolutionStyledContainer>
             <h1>Solutions</h1>
             {posts.map((post, index) => (
-                <SolutionCards post={post} />
+                <SolutionCards key={index} post={post} />
             ))}
         </SolutionStyledContainer>
     );

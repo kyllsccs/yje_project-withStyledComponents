@@ -9,7 +9,7 @@ function products({ posts }) {
         <ProductsContainer>
             <h1>Products</h1>
             {posts.map((post, index) => (
-                <PartnersCards post={post} />
+                <PartnersCards key={index} post={post} />
             ))}
         </ProductsContainer>
     );

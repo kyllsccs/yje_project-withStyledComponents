@@ -17,7 +17,7 @@ function MenuCard(props) {
         >
             <div>
                 {props.PhotoShow === "on" ? (
-                    <Image src={props.Photo} />
+                    <Image src={props.Photo} alt={props.alt} />
                 ) : (
                     <span />
                 )}
@@ -27,7 +27,7 @@ function MenuCard(props) {
             <p>{props.contents}</p>
             <div>
                 {props.ButtonShow === "on" ? (
-                    <Link href={props.linkto}>
+                    <Link href={props.linkto} passHref>
                         <StyledReadMoreButton>
                             {props.buttonTXT}
                         </StyledReadMoreButton>
@@ -52,6 +52,7 @@ MenuCard.defaultProps = {
     linkto: "/",
     buttonTXT: "button content",
     Photo: Photo_1,
+    alt: "YJE",
 };
 
 export default MenuCard;
