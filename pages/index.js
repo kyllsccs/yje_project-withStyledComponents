@@ -5,6 +5,7 @@ import {
     StyledIndexCard,
     StyledIndexContainer,
 } from "../components/styles/Index.styled";
+import cover_img from "../public/image/posts/digital_s.jpg";
 
 const Title = styled.h1`
     color: ${({ theme }) => theme.colors.primary};
@@ -20,7 +21,7 @@ const card_contents = `
 export default function Home() {
     return (
         <StyledIndexContainer>
-            <ImageView />
+            <ImageView Photo={cover_img} />
             <StyledIndexCard>
                 <MenuCard
                     title="Frameless Muti-touch Monitor"
