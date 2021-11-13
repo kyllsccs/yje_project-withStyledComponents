@@ -4,7 +4,8 @@ import {
 } from "../components/styles/About.styled";
 import MenuCard from "../components/MenuCard";
 import Image from "next/image";
-import Photo_Sample from "../public/image/posts/4537032.jpg";
+import Photo_logo from "../public/image/posts/Logo.jpg";
+import ImageView from "../components/ImageView";
 
 const card_contents = `
 Where can I get some?
@@ -25,16 +26,7 @@ function about() {
     return (
         <AboutPageContainer>
             <StyledInfoGroup>
-                <Image src={Photo_Sample} />
-                <MenuCard
-                    title="About Y.J.E"
-                    contents={card_contents}
-                    linkto="/"
-                    buttonTXT="this is test"
-                    vw="90vw"
-                    PhotoShow="off"
-                    ButtonShow="on"
-                />
+                <ImageView />
             </StyledInfoGroup>
             <StyledInfoGroup>
                 <MenuCard
@@ -42,11 +34,11 @@ function about() {
                     contents={card_contents}
                     linkto="/"
                     buttonTXT="Back"
-                    vw="90vw"
+                    vw="10vw"
                     PhotoShow="off"
                     ButtonShow="off"
+                    Photo={Photo_logo}
                 />
-                <Image src={Photo_Sample} />
             </StyledInfoGroup>
         </AboutPageContainer>
     );
