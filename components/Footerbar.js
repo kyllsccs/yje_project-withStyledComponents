@@ -25,7 +25,7 @@ function Footerbar() {
                 </p>
             </StyledFootInfo> */}
             <StyledFootQuickLink>
-                <span> ■■■■■ Links ■■■■■ </span>
+                <span> Links </span>
                 <li>
                     <Link href="/about">
                         <a>├─ About</a>
@@ -48,7 +48,7 @@ function Footerbar() {
                 </li>
             </StyledFootQuickLink>
             <StyledFootContact>
-                <a> ■■■■■ Contact YJE ■■■■■ </a>
+                <a> Contact YJE </a>
                 <li>├─ TEL : 886-2-22263839 </li>
                 <li>├─ FAX : 886-2-22263836</li>
                 <li>
