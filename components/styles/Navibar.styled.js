@@ -4,10 +4,11 @@ export const StyledNav = styled.div`
     background-color: #000000;
     display: flex;
     justify-content: space-between;
+    max-height: 6vh;
 `;
 
 export const StyledLogo = styled.div`
-    padding: 1rem 1rem;
+    padding: 1rem 0.7rem;
     font-weight: 1200;
     cursor: grabbing;
 
@@ -16,12 +17,12 @@ export const StyledLogo = styled.div`
     }
 
     a {
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #0000ff;
         text-decoration: none;
         span {
             font-weight: 800;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             /* font-style: italic; */
             color: white;
             &:hover {
@@ -40,10 +41,10 @@ export const StyledMenu = styled.section`
     padding: 1rem 0;
 
     a {
-        padding: 0.7rem;
+        padding: 0.3rem;
         /* font-style: italic; */
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         color: white;
         &:hover {

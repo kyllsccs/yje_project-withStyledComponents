@@ -10,7 +10,7 @@ import { StyledLogo } from "./styles/Navibar.styled";
 function Footerbar() {
     return (
         <FooterContainer>
-            <StyledFootInfo>
+            {/* <StyledFootInfo>
                 <StyledLogo>
                     <Link href="/">
                         <a>Y.J.E Display Tech</a>
@@ -23,38 +23,43 @@ function Footerbar() {
                     printer took a galley of type and scrambled it to make a
                     type specimen book. It has survived not only five centuries,
                 </p>
-            </StyledFootInfo>
+            </StyledFootInfo> */}
             <StyledFootQuickLink>
-                <span> Quick Link</span>
+                <span> ■■■■■ Links ■■■■■ </span>
                 <li>
                     <Link href="/about">
-                        <a>About</a>
+                        <a>├─ About</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/products">
-                        <a>Products</a>
+                        <a>├─ Products</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/solutions">
-                        <a>Solutions</a>
+                        <a>├─ Solutions</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/partners">
-                        <a>Partners</a>
+                        <a>└─ Partners</a>
                     </Link>
                 </li>
             </StyledFootQuickLink>
             <StyledFootContact>
-                <a>Contact YJE</a>
-                <li>TEL : 886-2-22263839 </li>
-                <li>FAX : 886-2-22263836</li>
-                <li>E-mail : kk@yje.com.tw</li>
+                <a> ■■■■■ Contact YJE ■■■■■ </a>
+                <li>├─ TEL : 886-2-22263839 </li>
+                <li>├─ FAX : 886-2-22263836</li>
+                <li>
+                    ├─ E-mail :{" "}
+                    <a href="mailto:kk@yje.com.tw?subject=[Your Name] Business Inquiry">
+                        kk@yje.com.tw
+                    </a>
+                </li>
                 <li>
                     {/* Address */}
-                    Address: No. 496-6, Bannan Rd., Zhonghe Dist., New Taipei
+                    └─ Address: No. 496-6, Bannan Rd., Zhonghe Dist., New Taipei
                     City 235602, Taiwan (R.O.C.)
                 </li>
             </StyledFootContact>

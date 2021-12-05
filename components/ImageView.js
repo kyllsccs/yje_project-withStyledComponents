@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Photo_1 from "../public/image/posts/contact_cover.jpg";
+import Photo_1 from "../public/image/posts/notyetuse/contact_cover.jpg";
 import { StyledImageContainer } from "./styles/ImageView.styled";
 
 function ImageView(props) {

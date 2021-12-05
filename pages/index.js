@@ -1,65 +1,57 @@
-import styled from "styled-components";
+import IndexCards from "../components/IndexCards";
+// using by Patners style
+import { IndexCardsStyledContainer } from "../components/styles/indexCards.styled";
+// import cover_img from "../public/image/posts/indexImage/digital_s.jpg";
+import cover_logo from "../public/image/posts/indexImage/cover_logo_1.jpg";
+import cover_logo_2 from "../public/image/posts/indexImage/cover_logo_3.jpg";
 import ImageView from "../components/ImageView";
-import MenuCard from "../components/MenuCard";
-import {
-    StyledIndexCard,
-    StyledIndexContainer,
-} from "../components/styles/Index.styled";
-import cover_img from "../public/image/posts/digital_s.jpg";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
-const Title = styled.h1`
-    color: ${({ theme }) => theme.colors.primary};
-`;
-
-const card_contents = `
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-`;
-
-export default function Home() {
+function Home({ posts }) {
+    // console.log(posts);
     return (
-        <StyledIndexContainer>
-            <ImageView Photo={cover_img} />
-            <StyledIndexCard>
-                <MenuCard
-                    title="Frameless Muti-touch Monitor"
-                    contents={card_contents}
-                    buttonTXT="Get More..."
-                    linkto="/about"
-                    vw="20vw"
-                    PhotoShow="on"
-                    ButtonShow="on"
-                />
-                <MenuCard
-                    title="Aluminum Frame Monitor"
-                    contents={card_contents}
-                    buttonTXT="Get More..."
-                    linkto="/"
-                    vw="20vw"
-                    PhotoShow="on"
-                    ButtonShow="on"
-                />
-                <MenuCard
-                    title="Multi-Mounting type Monitor"
-                    contents={card_contents}
-                    buttonTXT="Get More..."
-                    linkto="/"
-                    vw="20vw"
-                    PhotoShow="on"
-                    ButtonShow="on"
-                />
-                <MenuCard
-                    title="High Brightness Display / Kits"
-                    contents={card_contents}
-                    buttonTXT="Get More..."
-                    linkto="/"
-                    vw="20vw"
-                    PhotoShow="on"
-                    ButtonShow="on"
-                />
-            </StyledIndexCard>
-        </StyledIndexContainer>
+        <IndexCardsStyledContainer>
+            <ImageView Photo={cover_logo} />
+            {posts.map((post, index) => (
+                <IndexCards key={index} post={post} />
+            ))}
+            {/* <ImageView Photo={cover_logo_2} /> */}
+        </IndexCardsStyledContainer>
     );
 }
+
+// Server side 的路徑, path = 直接指定要接哪個資料夾, fetch the data.
+export async function getStaticProps() {
+    // 指定讀取檔案資料夾, 取得資料夾內部資訊, type is Array.
+    const files = fs.readdirSync(path.join("Contents/index.posts"));
+
+    // 使用map function來返回每一個markdown裡面的資訊
+    const posts = files.map((filename) => {
+        const slug = filename.replace(".md", "");
+
+        // 讀取檔案, 用同步function, utf-8 指定編碼方式
+        const markDownContents = fs.readFileSync(
+            path.join("Contents/index.posts", filename),
+            "utf-8"
+        );
+        // console.log(markDownContents);
+
+        // 重新解構, 把data 解構為 frontmatter
+        const { data: frontmatter } = matter(markDownContents);
+
+        return {
+            slug,
+            frontmatter,
+        };
+    });
+
+    return {
+        props: {
+            posts, // 把map 出來的objects 物件, 賦予給props.
+        },
+    };
+}
+
+export default Home;

@@ -4,7 +4,7 @@ import {
 } from "../components/styles/About.styled";
 import MenuCard from "../components/MenuCard";
 import Image from "next/image";
-import Photo_logo from "../public/image/posts/Logo.jpg";
+import Photo_logo from "../public/image/posts/aboutImage/Logo.jpg";
 import ImageView from "../components/ImageView";
 
 const card_contents = `

@@ -8,12 +8,12 @@ export const FooterContainer = styled.div`
 
 export const StyledFootInfo = styled.section`
     width: 30vw;
-    max-height: 100vh;
+    max-height: 50vh;
     padding: 1rem 2rem;
 
     p {
         padding: 0rem 1rem;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         color: white;
     }
 `;
@@ -22,20 +22,20 @@ export const StyledFootQuickLink = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30vw;
+    width: 40vw;
     color: white;
-    padding: 1.9rem;
+    padding: 2rem;
 
     span {
         color: white;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
 
     a {
         color: white;
         font-size: 1.2rem;
-        font-weight: 600;
+        /* font-weight: 600; */
         text-decoration: none;
         cursor: grab;
         &:hover {
@@ -48,17 +48,21 @@ export const StyledFootContact = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30vw;
+    width: 60vw;
     color: white;
     padding: 1.9rem;
 
     a {
         color: white;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-weight: 600;
     }
 
     li {
         font-size: 1.2rem;
+        a {
+            color: gold;
+            font-size: 1.2rem;
+        }
     }
 `;
