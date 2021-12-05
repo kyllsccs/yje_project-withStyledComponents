@@ -17,19 +17,19 @@ function Navibar() {
                 <Link href="/" passHref>
                     <StyledLogo>
                         <a>
-                            Y.J.E <span> Display Tech</span>
+                            Y.J.E <span> Display Tech | </span>
                         </a>
                     </StyledLogo>
                 </Link>
                 <StyledMenu>
                     <Link href="/products" passHref>
-                        <a>Products</a>
+                        <a>Products | </a>
                     </Link>
                     <Link href="/solutions" passHref>
-                        <a>Solutions</a>
+                        <a>Solutions | </a>
                     </Link>
                     <Link href="/contact" passHref>
-                        <a>Contact</a>
+                        <a>Contact | </a>
                     </Link>
                 </StyledMenu>
             </StyledNav>

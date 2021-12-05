@@ -4,16 +4,18 @@ export const FooterContainer = styled.div`
     background-color: black;
     display: flex;
     justify-content: start;
+    max-width: 100vw;
+    height: auto;
 `;
 
 export const StyledFootInfo = styled.section`
     width: 30vw;
-    max-height: 50vh;
+    height: 50vh;
     padding: 1rem 2rem;
 
     p {
         padding: 0rem 1rem;
-        font-size: 0.9rem;
+        font-size: 1vmin;
         color: white;
     }
 `;
@@ -28,13 +30,13 @@ export const StyledFootQuickLink = styled.section`
 
     span {
         color: white;
-        font-size: 1.4rem;
+        font-size: 2.3vmin;
         font-weight: 600;
     }
 
     a {
         color: white;
-        font-size: 1.2rem;
+        font-size: 2vmin;
         /* font-weight: 600; */
         text-decoration: none;
         cursor: grab;
@@ -54,15 +56,15 @@ export const StyledFootContact = styled.div`
 
     a {
         color: white;
-        font-size: 1.4rem;
+        font-size: 2.3vmin;
         font-weight: 600;
     }
 
     li {
-        font-size: 1.2rem;
+        font-size: 2vmin;
         a {
             color: gold;
-            font-size: 1.2rem;
+            font-size: 2vmin;
         }
     }
 `;

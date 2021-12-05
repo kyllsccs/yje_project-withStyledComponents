@@ -13,7 +13,7 @@ export const IndexCardsContainer = styled.div`
     /* align-items: center; */
 
     a {
-        font-size: 2rem;
+        font-size: 3vmin;
         font-weight: bold;
         color: #08484c;
         align-items: flex-start;
@@ -21,7 +21,7 @@ export const IndexCardsContainer = styled.div`
     }
 
     p {
-        font-size: 1.7rem;
+        font-size: 2.5vmin;
         font-weight: 500;
         max-width: 100%;
         color: gray;
@@ -36,15 +36,8 @@ export const IndexCardsContainer = styled.div`
     button {
         background-color: blue;
         color: white;
-        font-size: 1.3rem;
+        font-size: 1.2vmin;
         width: 13rem;
         height: auto;
-    }
-
-    hr {
-        /* display: block; */
-        height: 5;
-        max-width: 100%;
-        border-top: 1px solid blue;
     }
 `;

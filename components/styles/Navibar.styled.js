@@ -4,7 +4,8 @@ export const StyledNav = styled.div`
     background-color: #000000;
     display: flex;
     justify-content: space-between;
-    max-height: 6vh;
+    height: auto;
+    max-width: 100vw;
 `;
 
 export const StyledLogo = styled.div`
@@ -17,12 +18,12 @@ export const StyledLogo = styled.div`
     }
 
     a {
-        font-size: 1.5rem;
+        font-size: 3vmin;
         color: #0000ff;
         text-decoration: none;
         span {
             font-weight: 800;
-            font-size: 1.2rem;
+            font-size: 2.5vmin;
             /* font-style: italic; */
             color: white;
             &:hover {
@@ -44,7 +45,7 @@ export const StyledMenu = styled.section`
         padding: 0.3rem;
         /* font-style: italic; */
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 2vmin;
         text-decoration: none;
         color: white;
         &:hover {
@@ -62,7 +63,7 @@ export const StyledMenuSelect = styled.select`
 
     li {
         cursor: grabbing;
-        font-size: 1.8rem;
+        font-size: 2vmin;
         color: white;
         background: black;
         display: flex;
