@@ -6,6 +6,7 @@ export const FooterContainer = styled.div`
     justify-content: start;
     max-width: 100vw;
     height: auto;
+    margin: 5vmin 0 0 0;
 `;
 
 export const StyledFootInfo = styled.section`

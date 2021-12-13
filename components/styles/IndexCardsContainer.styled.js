@@ -34,9 +34,9 @@ export const IndexCardsContainer = styled.div`
     }
 
     button {
-        background-color: blue;
-        color: white;
-        font-size: 1.2vmin;
+        /* background-color: blue; */
+        color: blue;
+        font-size: 1.7vmin;
         width: 13rem;
         height: auto;
     }
