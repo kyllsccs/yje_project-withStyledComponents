@@ -17,13 +17,20 @@ function products({ posts }) {
 }
 
 export async function getStaticProps() {
-    const filesbox = fs.readdirSync(path.join("Contents/products.posts"));
+    // 定義path 20211218
+    const main_folder_path = "Contents/products.posts";
+    const details_folder_path =
+        "Contents/products.posts/products.details.posts";
+
+
+    
+    const main_filesbox = fs.readdirSync(path.join(main_folder_path));
     // console.log(files);
     // 添加判斷為.md檔案的
     const files = [];
-    for (let i = 0; i < filesbox.length; i++) {
-        if (filesbox[i].includes(".md")) {
-            files.push(filesbox[i]);
+    for (let i = 0; i < main_filesbox.length; i++) {
+        if (main_filesbox[i].includes(".md")) {
+            files.push(main_filesbox[i]);
         }
     }
     console.log(files);
