@@ -26,8 +26,17 @@ export async function getStaticProps() {
     const details_folder_path =
         "Contents/products.posts/products.details.posts";
 
+    // 1 先取得資料夾內的所有資料夾&&檔案名稱
+    function path_array(enter_path) {
+        const path_box = fs.readdirSync(path.join(enter_path));
+        return path_box;
+    }
+
+    // 2 取出明細&&details
     function exc_props(path_1) {
-        const main_filesbox = fs.readdirSync(path.join(path_1));
+        const main_filesbox = path_array(path_1);
+        console.log(main_filesbox);
+
         // console.log(files);
         // 添加判斷為.md檔案的
         const files = [];
@@ -36,7 +45,7 @@ export async function getStaticProps() {
                 files.push(main_filesbox[i]);
             }
         }
-        console.log(files);
+        // console.log(files);
 
         const posts = files.map((filename) => {
             const slug = filename.replace(".md", "");
