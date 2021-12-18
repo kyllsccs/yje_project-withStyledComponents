@@ -1,9 +1,9 @@
+import Head from "next/head";
 import IndexCards from "../components/IndexCards";
 // using by Patners style
 import { IndexCardsStyledContainer } from "../components/styles/indexCards.styled";
 // import cover_img from "../public/image/posts/indexImage/digital_s.jpg";
 import cover_logo from "../public/image/posts/indexImage/cover_logo_1.jpg";
-import cover_logo_2 from "../public/image/posts/indexImage/cover_logo_3.jpg";
 import ImageView from "../components/ImageView";
 import fs from "fs";
 import path from "path";
@@ -12,13 +12,18 @@ import matter from "gray-matter";
 function Home({ posts }) {
     // console.log(posts);
     return (
-        <IndexCardsStyledContainer>
-            <ImageView Photo={cover_logo} />
-            {posts.map((post, index) => (
-                <IndexCards key={index} post={post} />
-            ))}
-            {/* <ImageView Photo={cover_logo_2} /> */}
-        </IndexCardsStyledContainer>
+        <div>
+            <Head>
+                <title>Y.J.E.Display Tech Co., LTD.</title>
+            </Head>
+            <IndexCardsStyledContainer>
+                <ImageView Photo={cover_logo} />
+                {posts.map((post, index) => (
+                    <IndexCards key={index} post={post} />
+                ))}
+                {/* <ImageView Photo={cover_logo_2} /> */}
+            </IndexCardsStyledContainer>
+        </div>
     );
 }
 
@@ -46,7 +51,7 @@ export async function getStaticProps() {
             frontmatter,
         };
     });
-
+    // console.log(posts);
     return {
         props: {
             posts, // 把map 出來的objects 物件, 賦予給props.
