@@ -5,12 +5,16 @@ import ProductsCards from "../components/ProductsCards";
 import { ProductsContainer } from "../components/styles/Products.styled";
 
 // 迭代出卡片
-function products({ main_posts }) {
+function products({ main_posts, detail_posts }) {
     return (
         <ProductsContainer>
             <h1>Products</h1>
             {main_posts.map((post, index) => (
-                <ProductsCards key={index} post={post} />
+                <ProductsCards
+                    key={index}
+                    main_post={post}
+                    detail_posts={detail_posts}
+                />
             ))}
         </ProductsContainer>
     );
@@ -57,6 +61,7 @@ export async function getStaticProps() {
     return {
         props: {
             main_posts,
+            detail_posts,
         },
     };
 }

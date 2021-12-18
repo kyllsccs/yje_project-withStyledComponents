@@ -16,4 +16,8 @@ export const CardsContainer = styled.div`
         width: 30%;
         height: 20%;
     }
+
+    button {
+        width: 100%;
+    }
 `;
