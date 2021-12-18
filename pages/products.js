@@ -17,7 +17,16 @@ function products({ posts }) {
 }
 
 export async function getStaticProps() {
-    const files = fs.readdirSync(path.join("Contents/products.posts"));
+    const filesbox = fs.readdirSync(path.join("Contents/products.posts"));
+    // console.log(files);
+    // 添加判斷為.md檔案的
+    const files = [];
+    for (let i = 0; i < filesbox.length; i++) {
+        if (filesbox[i].includes(".md")) {
+            files.push(filesbox[i]);
+        }
+    }
+    console.log(files);
 
     const posts = files.map((filename) => {
         const slug = filename.replace(".md", "");
