@@ -4,6 +4,7 @@ import path from "path";
 import ProductsCards from "../components/ProductsCards";
 import { ProductsContainer } from "../components/styles/Products.styled";
 
+// 迭代出卡片
 function products({ posts }) {
     return (
         <ProductsContainer>
@@ -19,7 +20,7 @@ export async function getStaticProps() {
     const files = fs.readdirSync(path.join("Contents/products.posts"));
 
     const posts = files.map((filename) => {
-        const slug = filename.replace(",md", "");
+        const slug = filename.replace(".md", "");
         const markDownContents = fs.readFileSync(
             path.join("Contents/products.posts", filename),
             "utf-8"
