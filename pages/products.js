@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
-import PartnersCards from "../components/PartnersCards";
+import ProductsCards from "../components/ProductsCards";
 import { ProductsContainer } from "../components/styles/Products.styled";
 
 function products({ posts }) {
@@ -9,7 +9,7 @@ function products({ posts }) {
         <ProductsContainer>
             <h1>Products</h1>
             {posts.map((post, index) => (
-                <PartnersCards key={index} post={post} />
+                <ProductsCards key={index} post={post} />
             ))}
         </ProductsContainer>
     );

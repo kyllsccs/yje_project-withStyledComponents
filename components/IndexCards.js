@@ -8,7 +8,7 @@ export default function IndexCards({ post }) {
             <a>{post.frontmatter.title}</a>
             <p>{post.frontmatter.excerpt}</p>
             <Link href="/products">
-                <button>Click to get more.</button>
+                <button>Get More</button>
             </Link>
             <br></br>
         </IndexCardsContainer>
