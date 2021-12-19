@@ -93,6 +93,8 @@ export async function getStaticProps() {
         return result_banks;
     }
 
+    const pp = "Contents/index.posts";
+
     const finial_data = back_objects(path_banks);
 
     return {
