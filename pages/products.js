@@ -94,20 +94,6 @@ export async function getStaticProps() {
     }
 
     const finial_data = back_objects(path_banks);
-    // console.log(finial_data);
-    // const mainss = path_banks[0][0];
-    // const details_s = `${mainss}/${path_banks[0].pop()}`;
-
-    // const main_posts = exc_props(mainss);
-    // const detail_posts = exc_props(details_s);
-    // console.log(main_posts);
-    // console.log(detail_posts);
-    // return {
-    //     props: {
-    //         main_posts,
-    //         detail_posts,
-    //     },
-    // };
 
     return {
         props: {
