@@ -5,15 +5,15 @@ import ProductsCards from "../components/ProductsCards";
 import { ProductsContainer } from "../components/styles/Products.styled";
 
 // 迭代出卡片
-function products({ main_posts, detail_posts }) {
+function products({ finial_data }) {
     return (
         <ProductsContainer>
             <h1>Products</h1>
-            {main_posts.map((post, index) => (
+            {finial_data.map((post, index) => (
                 <ProductsCards
                     key={index}
-                    main_post={post}
-                    detail_posts={detail_posts}
+                    main_post={post[0][0]}
+                    detail_posts={post[1]}
                 />
             ))}
         </ProductsContainer>
@@ -21,10 +21,8 @@ function products({ main_posts, detail_posts }) {
 }
 
 export async function getStaticProps() {
-    // 定義path 20211218
+    // 定義path 20211218 入口
     const main_folder_path = "Contents/products.posts";
-    const details_folder_path =
-        "Contents/products.posts/products.details.posts";
 
     // 1 先取得資料夾內的所有資料夾&&檔案名稱
     function path_array(enter_path) {
@@ -37,7 +35,7 @@ export async function getStaticProps() {
             path_bank.push(per_path);
         }
         // console.log(path_box);
-        console.log(path_bank);
+        // console.log(path_bank);
         // return 各個資料夾裡面的數據
         return path_bank;
     }
@@ -78,19 +76,42 @@ export async function getStaticProps() {
     const path_banks = path_array(main_folder_path);
     // console.log(path_banks);
 
-    const mainss = path_banks[0][0];
-    const details_s = `${mainss}/${path_banks[0][2]}`;
+    // 3. 做出return object
+    function back_objects(object_s) {
+        const result_banks = [];
+        for (let i = 0; i < object_s.length; i++) {
+            const first_path = exc_props(object_s[i][0]);
+            const finial_detail_path = exc_props(
+                `${object_s[i][0]}/${object_s[i].pop()}`
+            );
+            const result_k = [first_path, finial_detail_path];
+            // console.log(first_path.length);
+            // console.log(finial_detail_path.length);
+            result_banks.push(result_k);
+        }
+        // console.log(result_banks);
+        return result_banks;
+    }
 
-    const main_posts = exc_props(mainss);
-    const detail_posts = exc_props(details_s);
+    const finial_data = back_objects(path_banks);
+    // console.log(finial_data);
+    // const mainss = path_banks[0][0];
+    // const details_s = `${mainss}/${path_banks[0].pop()}`;
 
-    // const main_posts = exc_props(main_folder_path);
-    // const detail_posts = exc_props(details_folder_path);
+    // const main_posts = exc_props(mainss);
+    // const detail_posts = exc_props(details_s);
+    // console.log(main_posts);
+    // console.log(detail_posts);
+    // return {
+    //     props: {
+    //         main_posts,
+    //         detail_posts,
+    //     },
+    // };
 
     return {
         props: {
-            main_posts,
-            detail_posts,
+            finial_data,
         },
     };
 }
