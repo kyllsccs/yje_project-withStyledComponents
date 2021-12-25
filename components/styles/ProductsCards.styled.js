@@ -17,7 +17,16 @@ export const CardsContainer = styled.div`
         height: 20%;
     }
 
-    button {
+    dt {
+        margin: 6px 0 6px 0;
+        padding: 1px 0 1px 0.5rem;
+        cursor: pointer;
+        border-bottom: 1px blue solid;
+        border-left: 0.3rem blue solid;
         width: 100%;
+
+        &:hover {
+            background-color: #badbed;
+        }
     }
 `;
