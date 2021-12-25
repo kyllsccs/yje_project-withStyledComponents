@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import Link from "next/link";
-// import styled from "styled-components";
 import {
     ProductListPageStyled,
     MarkdownContainer,
@@ -21,6 +20,7 @@ export default function ProductListPage({
             </Link>
             <div className="container">
                 <h1>{title}</h1>
+                <h4>On {date}</h4>
                 <img src={cover_image} alt="" />
                 <MarkdownContainer>
                     <div
