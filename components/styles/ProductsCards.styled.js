@@ -17,7 +17,7 @@ export const CardsContainer = styled.div`
         height: 20%;
     }
 
-    dt {
+    ul {
         margin: 6px 0 6px 0;
         padding: 1px 0 1px 0.5rem;
         cursor: pointer;
@@ -27,6 +27,7 @@ export const CardsContainer = styled.div`
 
         &:hover {
             background-color: #badbed;
+            border-left: 0.8rem red solid;
         }
     }
 `;
