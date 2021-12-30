@@ -8,7 +8,7 @@ export default function PartnersCards({ main_post, detail_posts }) {
             <h3>{main_post.frontmatter.title}</h3>
             <p>{main_post.frontmatter.excerpt}</p>
             {detail_posts.map((detail_post, index) => (
-                <Link href={`/post/${detail_post.slug}`}>
+                <Link href={`/posts/${detail_post.slug}`}>
                     <dt key={index}>{detail_post.frontmatter.title}</dt>
                 </Link>
             ))}
