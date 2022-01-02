@@ -22,7 +22,7 @@ function Navibar() {
                     </StyledLogo>
                 </Link>
                 <StyledMenu>
-                    <Link href="/products" passHref>
+                    <Link href="/products/" passHref>
                         <a>Products | </a>
                     </Link>
                     <Link href="/solutions" passHref>

@@ -6,12 +6,12 @@ import Link from "next/link";
 import {
     ProductListPageStyled,
     MarkdownContainer,
-} from "../../../../../../components/styles/MarkdownApply.styled";
+} from "../../../../../components/styles/MarkdownApply.styled";
 
 export default function ProductListPage({
     // product_folder,
-    // main_foldername,
-    // midd_foldername,
+    main_foldername,
+    midd_foldername,
     frontmatter: { title, date, cover_image },
     slug,
     content,
@@ -40,7 +40,6 @@ export default function ProductListPage({
 
 export async function getStaticPaths() {
     // 取出資料夾裡面的.md 檔案名稱, 當成path
-
     const post_path = "Contents/products.posts";
     const files_folder_array = fs.readdirSync(path.join(post_path)); // array
     const retFile_folder_name = files_folder_array.map(
@@ -71,7 +70,7 @@ export async function getStaticPaths() {
         });
     });
 
-    // console.log(allpaths);
+    console.log(allpaths);
 
     return {
         paths: allpaths,
@@ -82,16 +81,25 @@ export async function getStaticPaths() {
 // 把 slug 簡單化 不要加入路徑, 路徑在getStaticProps裡面再做一次
 export async function getStaticProps({
     params: {
-        // main_enter_path,
+        main_enter_path,
         product_folder,
         main_foldername,
         midd_foldername,
         slug,
     },
 }) {
+    // const res = await fetch(
+    //     `http://localhost:3000/${main_enter_path}/${product_folder}/${main_foldername}/${midd_foldername}/${
+    //         slug + ".md"
+    //     }`
+    // );
+
+    // const markdownData = await res.json();
+    // console.log(markdownData);
+
     const markdownData = fs.readFileSync(
         path.join(
-            "Contents",
+            main_enter_path,
             product_folder,
             main_foldername,
             midd_foldername,
@@ -105,8 +113,8 @@ export async function getStaticProps({
     return {
         props: {
             // product_folder,
-            // main_foldername,
-            // midd_foldername,
+            main_foldername,
+            midd_foldername,
             frontmatter,
             slug,
             content,
