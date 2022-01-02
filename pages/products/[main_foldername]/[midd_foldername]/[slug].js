@@ -6,7 +6,7 @@ import Link from "next/link";
 import {
     ProductListPageStyled,
     MarkdownContainer,
-} from "../../../../../components/styles/MarkdownApply.styled";
+} from "../../../../components/styles/MarkdownApply.styled";
 
 export default function ProductListPage({
     // product_folder,
@@ -59,8 +59,8 @@ export async function getStaticPaths() {
         aim_final_filename.forEach((filename) => {
             const path = {
                 params: {
-                    main_enter_path: "Contents",
-                    product_folder: "products.posts",
+                    // main_enter_path: "Contents",
+                    // product_folder: "products.posts",
                     main_foldername: perFilename,
                     midd_foldername: "products.details.posts",
                     slug: filename.replace(".md", ""),
@@ -70,7 +70,7 @@ export async function getStaticPaths() {
         });
     });
 
-    console.log(allpaths);
+    // console.log(allpaths);
 
     return {
         paths: allpaths,
@@ -81,8 +81,8 @@ export async function getStaticPaths() {
 // 把 slug 簡單化 不要加入路徑, 路徑在getStaticProps裡面再做一次
 export async function getStaticProps({
     params: {
-        main_enter_path,
-        product_folder,
+        // main_enter_path,
+        // product_folder,
         main_foldername,
         midd_foldername,
         slug,
@@ -99,8 +99,9 @@ export async function getStaticProps({
 
     const markdownData = fs.readFileSync(
         path.join(
-            main_enter_path,
-            product_folder,
+            // main_enter_path,
+            "Contents/products.posts",
+            // product_folder,
             main_foldername,
             midd_foldername,
             slug + ".md"
